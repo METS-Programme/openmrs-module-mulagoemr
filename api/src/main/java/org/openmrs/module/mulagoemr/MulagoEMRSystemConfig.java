@@ -16,8 +16,8 @@ import org.springframework.stereotype.Component;
  */
 @Component("mulagoemr.MulagoNeonatalClinicElectronicMedicalRecordsSystemConfig")
 public class MulagoEMRSystemConfig {
-	
+
 	public final static String MODULE_PRIVILEGE = "Mulago Neonatal Clinic Electronic Medical Records System  Privilege";
-	
+
 	public final static String MODULE_ID = "mulagoemr";
 }

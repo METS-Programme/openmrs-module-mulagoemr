@@ -31,10 +31,10 @@ public class MulagoEMRActivator extends BaseModuleActivator {
 		try {
 			// install concepts
 			DataImporter dataImporter = Context.getRegisteredComponent("dataImporter", DataImporter.class);
-			
+
 			dataImporter.importData("metadata/MulagoEMRConcepts.xml");
 			log.info("MulagoEMR Custom Concepts imported");
-			
+
 			log.info("Started Mulago Neonatal Clinic Electronic Medical Records System ");
 		}
 		catch (Exception e) {
@@ -42,7 +42,7 @@ public class MulagoEMRActivator extends BaseModuleActivator {
 			ModuleFactory.stopModule(mod);
 			throw new RuntimeException("failed to setup the module ", e);
 		}
-		
+
 	}
 	
 	/**
