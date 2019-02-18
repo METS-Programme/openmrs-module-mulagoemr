@@ -11,6 +11,10 @@
 
 START TRANSACTION;
 
+
+-- These concepts have CEIL based UUIDs that cause unique index exceptions
+UPDATE concept SET uuid = UUID() WHERE concept_id IN (164981,164982, 164983, 164984);
+
 -- Move the concepts by 1000000
 UPDATE concept SET concept_id = concept_id + 1000000 WHERE concept_id IN  (164981,164982, 164983, 164984, 164985, 164986, 164987, 164989, 164990, 164991, 164992, 164993, 164994);
 UPDATE concept_answer SET concept_id = concept_id + 1000000 WHERE concept_id IN  (164981,164982, 164983, 164984, 164985, 164986, 164987, 164989, 164990, 164991, 164992, 164993, 164994);
