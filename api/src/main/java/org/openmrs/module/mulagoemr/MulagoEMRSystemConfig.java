@@ -14,8 +14,8 @@ import org.springframework.stereotype.Component;
 /**
  * Contains module's config.
  */
-@Component("mulagoemr.UgandaPrisonsServicesElectronicMedicalRecordsSystemConfig")
+@Component("mulagoemr.MulagoNeonatalClinicElectronicMedicalRecordsSystemConfig")
 public class MulagoEMRSystemConfig {
 	
-	public final static String MODULE_PRIVILEGE = "Uganda Prisons Services Electronic Medical Records System  Privilege";
+	public final static String MODULE_PRIVILEGE = "Mulago Neonatal Clinic Electronic Medical Records System  Privilege";
 }

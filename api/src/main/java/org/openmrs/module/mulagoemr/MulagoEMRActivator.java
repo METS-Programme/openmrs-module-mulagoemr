@@ -24,14 +24,14 @@ public class MulagoEMRActivator extends BaseModuleActivator {
 	 * @see #started()
 	 */
 	public void started() {
-		log.info("Started Uganda Prisons Services Electronic Medical Records System ");
+		log.info("Started Mulago Neonatal Clinic Electronic Medical Records System ");
 	}
 	
 	/**
 	 * @see #shutdown()
 	 */
 	public void shutdown() {
-		log.info("Shutdown Uganda Prisons Services Electronic Medical Records System ");
+		log.info("Shutdown Mulago Neonatal Clinic Electronic Medical Records System ");
 	}
 	
 }
