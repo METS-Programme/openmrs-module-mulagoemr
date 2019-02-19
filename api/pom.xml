@@ -11,4 +11,11 @@
 	<packaging>jar</packaging>
 	<name>Mulago Hospital Electronic Medical Records System  API</name>
 	<description>API project for Mulago Hospital Electronic Medical Records System </description>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>dataexchange-api</artifactId>
+		</dependency>
+	</dependencies>
 </project>

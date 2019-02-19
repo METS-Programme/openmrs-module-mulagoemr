@@ -11,7 +11,9 @@ package org.openmrs.module.mulagoemr;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.openmrs.api.context.Context;
 import org.openmrs.module.BaseModuleActivator;
+import org.openmrs.module.dataexchange.DataImporter;
 
 /**
  * This class contains the logic that is run every time this module is either started or shutdown
@@ -24,6 +26,13 @@ public class MulagoEMRActivator extends BaseModuleActivator {
 	 * @see #started()
 	 */
 	public void started() {
+		
+		// install concepts
+		DataImporter dataImporter = Context.getRegisteredComponent("dataImporter", DataImporter.class);
+		
+		dataImporter.importData("MulagoEMRConcepts.xml");
+		log.info("MulagoEMR Custom Concepts imported");
+		
 		log.info("Started Mulago Neonatal Clinic Electronic Medical Records System ");
 	}
 	
