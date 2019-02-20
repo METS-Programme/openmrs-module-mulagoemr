@@ -1,2 +1,3 @@
-# openmrs-module-mulagoemr
-UgandaEMR Customizations for Mulago Hospital 
+#MulagoEMR 
+
+UgandaEMR customizations for the Mulago Hospital neo-natal operations starting with a focus on PMTCT module 
