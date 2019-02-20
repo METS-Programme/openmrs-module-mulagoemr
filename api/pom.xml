@@ -18,4 +18,35 @@
 			<artifactId>dataexchange-api</artifactId>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<excludes>
+					<!-- exclude binary files from filtering as this causes corruption of the files -->
+					<exclude>*.zip</exclude>
+					<exclude>metadata/*.zip</exclude>
+				</excludes>
+			</resource>
+			<!-- Add the binary files to the omod without filtering -->
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>false</filtering>
+				<includes>
+					<include>*.zip</include>
+					<include>metadata/*.zip</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+				<filtering>true</filtering>
+			</testResource>
+		</testResources>
+	</build>
+
 </project>
