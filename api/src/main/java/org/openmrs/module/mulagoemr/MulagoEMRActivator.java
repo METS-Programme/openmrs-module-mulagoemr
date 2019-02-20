@@ -13,6 +13,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.BaseModuleActivator;
+import org.openmrs.module.Module;
+import org.openmrs.module.ModuleFactory;
 import org.openmrs.module.dataexchange.DataImporter;
 
 /**
@@ -26,14 +28,21 @@ public class MulagoEMRActivator extends BaseModuleActivator {
 	 * @see #started()
 	 */
 	public void started() {
+		try {
+			// install concepts
+			DataImporter dataImporter = Context.getRegisteredComponent("dataImporter", DataImporter.class);
+			
+			dataImporter.importData("metadata/MulagoEMRConcepts.xml");
+			log.info("MulagoEMR Custom Concepts imported");
+			
+			log.info("Started Mulago Neonatal Clinic Electronic Medical Records System ");
+		}
+		catch (Exception e) {
+			Module mod = ModuleFactory.getModuleById(MulagoEMRSystemConfig.MODULE_ID);
+			ModuleFactory.stopModule(mod);
+			throw new RuntimeException("failed to setup the module ", e);
+		}
 		
-		// install concepts
-		DataImporter dataImporter = Context.getRegisteredComponent("dataImporter", DataImporter.class);
-		
-		dataImporter.importData("MulagoEMRConcepts.xml");
-		log.info("MulagoEMR Custom Concepts imported");
-		
-		log.info("Started Mulago Neonatal Clinic Electronic Medical Records System ");
 	}
 	
 	/**
