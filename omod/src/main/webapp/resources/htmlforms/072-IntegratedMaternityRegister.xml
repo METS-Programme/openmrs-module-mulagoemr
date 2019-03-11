@@ -732,7 +732,7 @@
             <obs conceptId="1284AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" answerConceptId="115036AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" answerLabel="Obstructed Labour" style="checkbox" />
           </td>
           <td>
-            <obs conceptId="1284AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" answerConceptId="130AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" answerLabel="Puerperal sepsis" style="checkbox" />
+            <obs answerConceptId="130" answerLabel="Puerperal sepsis" conceptId="1284AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" style="checkbox" />
           </td>
         </tr>
         <tr>
